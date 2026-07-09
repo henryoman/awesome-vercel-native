@@ -7,6 +7,7 @@ Native SDK is a toolkit for building desktop apps with Zig, native-rendered UI, 
 ## Contents
 
 - [Official](#official)
+- [Packages](#packages)
 - [Core APIs](#core-apis)
 - [Frameworks](#frameworks)
 - [Apps](#apps)
@@ -19,9 +20,12 @@ Native SDK is a toolkit for building desktop apps with Zig, native-rendered UI, 
 - [Documentation](https://native-sdk.dev) - Official docs for building, testing, automating, and packaging Native SDK apps.
 - [Quick Start](https://native-sdk.dev/quick-start) - Install the CLI, create an app, run it locally, and build it.
 
-## Core APIs
+## Packages
 
 - [Native SDK Package](https://github.com/vercel-labs/native/tree/main/packages/native-sdk#readme) - NPM package and CLI distribution for the SDK.
+
+## Core APIs
+
 - [App Runtime](https://github.com/vercel-labs/native/tree/main/src/runtime) - App lifecycle, event loop, windows, effects, WebViews, GPU frames, and widget runtime.
 - [Native UI](https://native-sdk.dev/docs/native-ui) - Declarative `.native` views, canvas widgets, model/update wiring, layout, and hot reload.
 - [Platform Layer](https://github.com/vercel-labs/native/tree/main/src/platform) - Cross-platform windows, dialogs, menus, shortcuts, WebViews, GPU surfaces, and file drops.
@@ -40,6 +44,7 @@ Native SDK is a toolkit for building desktop apps with Zig, native-rendered UI, 
 
 ## Apps
 
+- [Chutes E2EE Native SDK Proof](https://github.com/alex-drocks/chutes-e2ee-chat-nativesdk#readme) - Native-rendered proof app for encrypted Chutes.ai chat requests using Zig, Native markup, `fx.fetch`, and Native SDK automation.
 - [GIFBin](https://github.com/henryoman/gifbin#readme) - Native GIF creation app using a Native SDK GPU surface, canvas widgets, Zig state, drag and drop, native dialogs, image decoding, and GIF export.
 
 ## Examples
