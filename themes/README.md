@@ -20,13 +20,19 @@ Today, `house` and `geist` are built-in theme packs wired through `ThemePack` an
 Copy a theme pack into an app-local `themes/` directory:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- dracula
+curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- all
 ```
 
-Then select it from `app.zon` once the SDK registry supports app-local theme modules:
+Or install one theme:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- graphite
+```
+
+Then select a theme from `app.zon` once the SDK registry supports app-local theme modules:
 
 ```zig
-.theme = "dracula"
+.theme = "graphite"
 ```
 
 For official built-ins, open a pull request to `vercel-labs/native` that adds `src/primitives/canvas/themes/<name>.zig` and wires it into the theme registry.

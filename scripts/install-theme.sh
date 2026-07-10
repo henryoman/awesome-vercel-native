@@ -4,10 +4,11 @@ set -eu
 repo_raw_base="${THEME_BASE_URL:-https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/themes}"
 theme="${1:-}"
 dest_dir="${2:-themes}"
+themes="house geist cobalt graphite solarized dracula gruvbox nord monokai one_dark tokyo_night catppuccin rose_pine github"
 
 usage() {
-    echo "usage: install-theme.sh <theme-name> [destination-dir]" >&2
-    echo "example: curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- dracula" >&2
+    echo "usage: install-theme.sh <theme-name|all> [destination-dir]" >&2
+    echo "example: curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- all" >&2
 }
 
 case "$theme" in
@@ -22,21 +23,34 @@ case "$theme" in
         ;;
 esac
 
-file_name="${theme}.zig"
-url="${repo_raw_base}/${file_name}"
-
 mkdir -p "$dest_dir"
 
-if [ -e "${dest_dir}/${file_name}" ]; then
-    echo "refusing to overwrite ${dest_dir}/${file_name}" >&2
-    exit 1
+install_one() {
+    theme_name="$1"
+    file_name="${theme_name}.zig"
+    url="${repo_raw_base}/${file_name}"
+
+    if [ -e "${dest_dir}/${file_name}" ]; then
+        echo "skipping existing ${dest_dir}/${file_name}"
+        return 0
+    fi
+
+    tmp_file="${dest_dir}/.${file_name}.tmp"
+    curl -fsSL "$url" -o "$tmp_file"
+    mv "$tmp_file" "${dest_dir}/${file_name}"
+    echo "installed ${file_name} to ${dest_dir}/"
+}
+
+trap 'rm -f "${dest_dir}"/.*.zig.tmp' EXIT HUP INT TERM
+
+if [ "$theme" = "all" ]; then
+    for theme_name in $themes; do
+        install_one "$theme_name"
+    done
+
+    echo "installed theme pack to ${dest_dir}/"
+    echo "select one with: .theme = \"geist\""
+else
+    install_one "$theme"
+    echo "select it with: .theme = \"${theme}\""
 fi
-
-tmp_file="${dest_dir}/.${file_name}.tmp"
-trap 'rm -f "$tmp_file"' EXIT HUP INT TERM
-
-curl -fsSL "$url" -o "$tmp_file"
-mv "$tmp_file" "${dest_dir}/${file_name}"
-
-echo "installed ${file_name} to ${dest_dir}/"
-echo "select it with: .theme = \"${theme}\""

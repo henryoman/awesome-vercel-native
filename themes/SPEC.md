@@ -130,7 +130,7 @@ Unknown names stay build errors, but the error should list all discovered names.
 The easiest install flow should copy or vendor the Zig module into the app:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- dracula
+curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- all
 ```
 
 ```txt
