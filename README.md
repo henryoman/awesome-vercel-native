@@ -2,8 +2,6 @@
   <img src="assets/nativesdkawesomelist.png" alt="Vercel Native SDK Awesome List" width="100%">
 </p>
 
-<h1 align="center">Awesome Vercel Native SDK</h1>
-
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
 </p>
