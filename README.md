@@ -1,14 +1,21 @@
-# Awesome Native SDK [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <img src="assets/nativesdkawesomelist.png" alt="Vercel Native SDK Awesome List" width="100%">
+</p>
 
-> Native desktop apps, examples, and resources built around Vercel Labs Native SDK.
+<h1 align="center">Awesome Vercel Native SDK</h1>
 
-Native SDK is a toolkit for building desktop apps with Zig, native-rendered UI, GPU surfaces, WebViews, automation, packaging, and an `app.zon` manifest.
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+</p>
+
+> Native desktop apps, examples, themes, and resources built around Vercel Labs Native SDK.
+
+[Vercel Labs Native SDK](https://native-sdk.dev) is a toolkit for building desktop apps with Zig, native-rendered UI, GPU surfaces, WebViews, automation, packaging, and an `app.zon` manifest.
 
 ## Contents
 
 - [Official](#official)
 - [Packages](#packages)
-- [Core APIs](#core-apis)
 - [Framework Integrations](#framework-integrations)
 - [Apps](#apps)
 - [Examples](#examples)
@@ -18,22 +25,11 @@ Native SDK is a toolkit for building desktop apps with Zig, native-rendered UI, 
 ## Official
 
 - [Native SDK](https://github.com/vercel-labs/native#readme) - Source repository for the Vercel Labs Native SDK.
-- [Documentation](https://native-sdk.dev) - Official docs for building, testing, automating, and packaging Native SDK apps.
 - [Quick Start](https://native-sdk.dev/quick-start) - Install the CLI, create an app, run it locally, and build it.
 
 ## Packages
 
 - [Native SDK Package](https://native-sdk.dev/packages) - NPM package and CLI distribution for the SDK.
-
-## Core APIs
-
-- [App Runtime](https://github.com/vercel-labs/native/tree/main/src/runtime) - App lifecycle, event loop, windows, effects, WebViews, GPU frames, and widget runtime.
-- [Native UI](https://native-sdk.dev/native-ui) - Declarative `.native` views, canvas widgets, model/update wiring, layout, and hot reload.
-- [Platform Layer](https://github.com/vercel-labs/native/tree/main/src/platform) - Cross-platform windows, dialogs, menus, shortcuts, WebViews, GPU surfaces, and file drops.
-- [Bridge](https://github.com/vercel-labs/native/tree/main/src/bridge) - Policy-controlled bridge between WebView JavaScript and Zig handlers.
-- [Security](https://github.com/vercel-labs/native/tree/main/src/security) - Navigation, external-link, permission, and bridge policy primitives.
-- [Automation](https://github.com/vercel-labs/native/tree/main/src/automation) - Built-in automation server for snapshots, screenshots, driving widgets, and smoke tests.
-- [Packaging](https://native-sdk.dev/packaging) - Build distributable desktop app bundles.
 
 ## Framework Integrations
 
@@ -64,17 +60,29 @@ Native SDK is a toolkit for building desktop apps with Zig, native-rendered UI, 
 
 ## Themes
 
-- [Theme Pack Spec](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/SPEC.md) - Proposed `theme.zon` folder format for theme packs that resolve to the same `DesignTokens` shape as the built-in `house` and `geist` packs.
-- [House](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/house/theme.zon) - Default monochrome neutral register.
-- [Geist](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/geist/theme.zon) - Built-in Geist-inspired register with cool neutrals, blue focus, 6px controls, and a taller control ladder.
-- [Cobalt](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/cobalt/theme.zon) - Example blue-accent theme pack extending `house`.
-- [Graphite](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/graphite/theme.zon) - Example dense neutral theme pack extending `geist`.
+- [Theme Pack Spec](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/SPEC.md) - Proposed Zig theme-pack format that resolves to the same `DesignTokens` shape as the built-in `house` and `geist` packs.
+- [House](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/house.zig) - Default monochrome neutral register.
+- [Geist](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/geist.zig) - Built-in Geist-inspired register with cool neutrals, blue focus, 6px controls, and a taller control ladder.
+- [Cobalt](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/cobalt.zig) - Example blue-accent theme pack extending `house`.
+- [Graphite](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/graphite.zig) - Example dense neutral theme pack extending `geist`.
+- [Solarized](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/solarized.zig) - Classic low-contrast warm/cyan theme pack.
+- [Dracula](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/dracula.zig) - Purple-accent editor theme with bright semantic colors.
+- [Gruvbox](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/gruvbox.zig) - Retro warm theme with earthy semantic hues.
+- [Nord](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/nord.zig) - Cool arctic theme with blue-gray surfaces.
+- [Monokai](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/monokai.zig) - High-energy classic editor palette with green and cyan accents.
+- [One Dark](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/one_dark.zig) - Atom-style neutral dark theme with blue accents.
+- [Tokyo Night](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/tokyo_night.zig) - Deep blue editor theme with vivid syntax-inspired hues.
+- [Catppuccin](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/catppuccin.zig) - Soft pastel theme with Latte/Mocha-style light and dark palettes.
+- [Rose Pine](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/rose_pine.zig) - Muted rose and pine palette with soft rounded surfaces.
+- [GitHub](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/github.zig) - Familiar GitHub-style light and dark UI palette.
 
 ## Tooling
 
 - [Native SDK CLI](https://native-sdk.dev/cli) - Commands for initializing, developing, checking, testing, building, packaging, and automating apps.
 - [Native Markup Extension](https://github.com/vercel-labs/native/tree/main/editors/native-markup#readme) - Editor support for `.native` markup.
 - [Agent Skills](https://native-sdk.dev/skills) - Native SDK guidance for AI agents working with Native SDK projects.
+- [Theme Installer](https://github.com/henryoman/awesome-native-sdk/blob/main/scripts/install-theme.sh) - Small shell installer for copying a theme Zig module into an app-local `themes/` directory.
+- [Theme Gallery](https://github.com/henryoman/awesome-native-sdk/tree/main/tools/theme-gallery#readme) - Minimal Svelte gallery for browsing the theme packs in this repository.
 
 ## Contributing
 

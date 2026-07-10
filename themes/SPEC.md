@@ -1,8 +1,19 @@
 # Theme Pack Spec
 
-This is a proposed `theme.zon` contract for Native SDK theme packs. The goal is simple: external themes should be interchangeable with built-in packs like `house` and `geist`.
+Theme packs should be Zig modules, exactly like the current built-in Geist pack.
 
-## Current Behavior
+No token DSL. No separate theme manifest. A theme is a Zig file that exports:
+
+```zig
+pub fn designTokens(
+    color_scheme: canvas.ColorScheme,
+    contrast: canvas.ColorContrast,
+) canvas.DesignTokens
+```
+
+That is the same shape as `src/primitives/canvas/themes/geist.zig` in Native SDK.
+
+## Current Path
 
 The current built-in path is:
 
@@ -15,31 +26,34 @@ app.zon .theme = "geist"
   -> geist.designTokens(color_scheme, contrast)
 ```
 
-`geist` is currently an enum case, and `src/primitives/canvas/themes/geist.zig` exports a function shaped like:
+The proposed change is only to make that registry accept more Zig modules:
 
-```zig
-pub fn designTokens(color_scheme: ColorScheme, contrast: ColorContrast) DesignTokens
+```txt
+app.zon .theme = "cobalt"
+  -> app_runner.manifestThemePack()
+  -> theme registry resolves "cobalt"
+  -> cobalt.designTokens(color_scheme, contrast)
 ```
-
-That is the compatibility target for file-backed themes.
 
 ## Directory Layout
 
-Each theme gets a folder named after the manifest-facing theme id:
+Each theme is one Zig source file:
 
 ```txt
 themes/
-  cobalt/
-    theme.zon
-    preview.native
-    README.md
+  house.zig
+  geist.zig
+  cobalt.zig
+  graphite.zig
+  solarized.zig
+  dracula.zig
 ```
 
-Only `theme.zon` is required. Preview and docs files are optional but recommended for theme galleries and visual regression tests.
+The file stem and manifest-facing theme name should match.
 
 ## Selection
 
-Apps keep selecting themes with `app.zon`:
+Apps still select themes with `app.zon`:
 
 ```zig
 .{
@@ -50,130 +64,111 @@ Apps keep selecting themes with `app.zon`:
 }
 ```
 
-The app manifest selects a theme by id. It should not inline token values.
+The app manifest selects a theme by name. It does not inline tokens.
 
-## Resolution
+## Pack Shape
 
-A theme id should resolve in this order:
+A pack can be full custom code, or it can extend a built-in pack with overrides:
 
-1. App-local `themes/<id>/theme.zon`
-2. Installed theme packages
+```zig
+const native_sdk = @import("native_sdk");
+const canvas = native_sdk.canvas;
+
+pub fn designTokens(
+    color_scheme: canvas.ColorScheme,
+    contrast: canvas.ColorContrast,
+) canvas.DesignTokens {
+    return canvas.DesignTokens.themeWithOverrides(.{
+        .color_scheme = color_scheme,
+        .contrast = contrast,
+        .pack = .house,
+    }, .{
+        .colors = .{
+            .accent = canvas.Color.rgb8(21, 94, 239),
+            .accent_text = canvas.Color.rgb8(255, 255, 255),
+            .focus_ring = canvas.Color.rgb8(21, 94, 239),
+        },
+        .radius = .{ .sm = 6, .md = 6, .lg = 8, .xl = 12 },
+    });
+}
+```
+
+That keeps theme authoring as close as possible to the existing SDK implementation.
+
+## Resolver
+
+The SDK needs a registry instead of an enum-only parser.
+
+Current:
+
+```zig
+pub const ThemePack = enum {
+    house,
+    geist,
+};
+```
+
+Target:
+
+```zig
+pub const ThemePack = union(enum) {
+    builtin: BuiltinThemePack,
+    module: ThemeModule,
+};
+```
+
+Resolution order:
+
+1. App-local `themes/<name>.zig`
+2. Installed theme package modules
 3. SDK built-ins such as `house` and `geist`
 
-Unknown names remain build errors. The error should list every valid id discovered by the resolver.
+Unknown names stay build errors, but the error should list all discovered names.
 
-## Token Contract
+## Install
 
-Every theme pack must resolve to a complete `DesignTokens` value for each pair:
+The easiest install flow should copy or vendor the Zig module into the app:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- dracula
+```
+
+```txt
+my-app/
+  app.zon
+  themes/
+    cobalt.zig
+```
+
+Then:
+
+```zig
+.theme = "cobalt"
+```
+
+For package installs later, the package should still expose the same thing: a Zig module with `designTokens(...)`.
+
+Official built-ins should be proposed directly in `vercel-labs/native` by adding `src/primitives/canvas/themes/<name>.zig` and wiring the name into the SDK theme registry.
+
+## Validation
+
+Every theme must resolve to a complete `DesignTokens` value for:
 
 - light + standard contrast
 - dark + standard contrast
 - light + high contrast
 - dark + high contrast
 
-The loader may accept partial token files when `.extends` is set, but validation must run after inheritance so renderers always receive complete tokens.
+The validator should reject:
 
-The layering order is:
+- missing `themes/<name>.zig`
+- missing `designTokens(color_scheme, contrast)`
+- file/name mismatch
+- incomplete resolved tokens
+- unknown theme names
+- required foreground/background contrast failures
 
-```txt
-base pack -> theme.zon overrides -> runtime options -> runtime-stamped values
-```
-
-Runtime options include color scheme, contrast, density, and reduced motion. Runtime-stamped values include pixel scale and platform text measurement.
-
-## File Shape
-
-Allowed top-level fields:
-
-- `.schema_version`
-- `.id`
-- `.name`
-- `.description`
-- `.extends`
-- `.kind`
-- `.source`
-- `.exports`
-- `.tokens`
-
-`kind`, `source`, and `exports` are mainly for representing built-ins during migration. Normal file-backed themes should use `.extends` plus `.tokens`.
-
-```zig
-.{
-    .schema_version = 1,
-    .id = "cobalt",
-    .name = "Cobalt",
-    .extends = "house",
-
-    .tokens = .{
-        .colors = .{
-            .light = .{
-                .accent = "#155eef",
-                .accent_text = "#ffffff",
-                .focus_ring = "#155eef",
-            },
-            .dark = .{
-                .accent = "#84adff",
-                .accent_text = "#07111f",
-                .focus_ring = "#84adff",
-            },
-        },
-        .radius = .{
-            .sm = 6,
-            .md = 6,
-            .lg = 8,
-            .xl = 12,
-        },
-    },
-}
-```
-
-The file is declarative. Computed themes can still exist as Zig modules, but imported user themes should use the same resulting token model.
-
-Colors should use hex strings:
-
-```txt
-#rrggbb
-#rrggbbaa
-```
-
-## Required Validation
-
-The loader should reject:
-
-- unknown top-level fields
-- unknown token names
-- invalid hex colors
-- ids that do not match their folder name
-- missing `.extends` when the token file is partial
-- unresolved `.extends`
-- incomplete resolved tokens for any scheme/contrast pair
-- insufficient foreground/background contrast for required text pairs
-
-## Built-In Migration
-
-`house` and `geist` can stay as Zig sources internally, but they should be exposed through the same registry as file-backed themes.
-
-The target API is a resolver, not an enum-only parser:
-
-```zig
-pub fn resolveThemePack(name: []const u8) ?ThemePack
-```
-
-Then both built-ins and external packs feed the same token path:
-
-```zig
-pub fn designTokens(pack: ThemePack, options: ThemeOptions) DesignTokens
-```
-
-That keeps app code stable:
-
-```zig
-.theme = app_runner.manifestThemePack()
-```
-
-while allowing `theme.zon` packs to behave like first-class built-ins.
-
-## Test Contract
+## Tests
 
 Every promoted theme should include:
 
@@ -181,6 +176,6 @@ Every promoted theme should include:
 - light and dark captures
 - high-contrast captures
 - a pinned render signature
-- a validation test that resolves the pack through the same path as `house` and `geist`
+- a test that resolves it through the same registry as `house` and `geist`
 
-That is what makes a new theme interchangeable instead of just visually similar.
+That is what makes a new theme interchangeable with the built-ins.
