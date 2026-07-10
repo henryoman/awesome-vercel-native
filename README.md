@@ -60,6 +60,7 @@
 
 ## Theme Packs
 
+- [Theme Gallery](https://nativesdkthemes.vercel.app) - Browsable gallery of Native SDK theme packs.
 - [Theme Pack Spec](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/SPEC.md) - Proposed Zig theme-pack format that resolves to the same `DesignTokens` shape as the built-in `house` and `geist` packs.
 - [House](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/house.zig) - Default monochrome neutral register.
 - [Geist](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/geist.zig) - Built-in Geist-inspired register with cool neutrals, blue focus, 6px controls, and a taller control ladder.
