@@ -19,7 +19,7 @@
 - [Framework Integrations](#framework-integrations)
 - [Apps](#apps)
 - [Examples](#examples)
-- [Themes](#themes)
+- [Theme Packs](#theme-packs)
 - [Tooling](#tooling)
 
 ## Official
@@ -58,7 +58,7 @@
 - [Notes](https://github.com/vercel-labs/native/tree/main/examples/notes#readme) - Persistence example with effects, restore on boot, dialogs, and search.
 - [Soundboard](https://github.com/vercel-labs/native/tree/main/examples/soundboard#readme) - Native media-style interface with cover art, context menus, timers, and custom theming.
 
-## Themes
+## Theme Packs
 
 - [Theme Pack Spec](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/SPEC.md) - Proposed Zig theme-pack format that resolves to the same `DesignTokens` shape as the built-in `house` and `geist` packs.
 - [House](https://github.com/henryoman/awesome-native-sdk/blob/main/themes/house.zig) - Default monochrome neutral register.
