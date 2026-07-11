@@ -85,4 +85,4 @@
 
 ## Contributing
 
-Contributions are welcome. Read [contributing.md](contributing.md) before opening a pull request.
+Built something with Native SDK? Read the [contribution guide](contributing.md) before opening a pull request, or [suggest a project](https://github.com/henryoman/awesome-native-sdk/issues/new?template=project-suggestion.yml) if you found something that should be reviewed.

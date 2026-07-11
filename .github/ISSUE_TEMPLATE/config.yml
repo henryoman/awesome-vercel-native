@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contribution guide
+    url: https://github.com/henryoman/awesome-native-sdk/blob/main/contributing.md
+    about: Read the eligibility rules and pull request instructions before submitting a project.
+  - name: Native SDK support
+    url: https://github.com/vercel-labs/native/issues
+    about: Report SDK bugs and request SDK features in the official Native SDK repository.

@@ -1,0 +1,32 @@
+name: Awesome Lint
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - contributing.md
+      - .github/workflows/awesome-lint.yml
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - contributing.md
+      - .github/workflows/awesome-lint.yml
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Lint awesome list
+        run: npx --yes awesome-lint@2.3.0

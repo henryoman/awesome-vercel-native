@@ -1,0 +1,70 @@
+name: Project suggestion
+description: Suggest a Native SDK project for maintainers to review
+title: "Suggestion: "
+labels:
+  - suggestion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when you found a project but cannot open a pull request. Project owners should normally follow the contribution guide and submit a pull request.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      placeholder: Example App
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical public URL
+      description: Link to the source repository or primary project page.
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Suggested section
+      options:
+        - Apps
+        - Examples
+        - Framework Integrations
+        - Packages
+        - Theme Packs
+        - Tooling
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What it does
+      description: Describe the project and the value it provides to Native SDK users.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Native SDK evidence
+      description: Link to an app.zon, dependency, source file, documentation, screenshot, or release that confirms the project uses Vercel Labs Native SDK.
+    validations:
+      required: true
+  - type: checkboxes
+    id: relationship
+    attributes:
+      label: Relationship
+      options:
+        - label: I own or maintain this project.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: The project and evidence are publicly accessible without signing in.
+          required: true
+        - label: The project is documented and is more than an empty scaffold, placeholder, or announcement.
+          required: true
+        - label: I searched the README and confirmed the project is not already listed.
+          required: true

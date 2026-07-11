@@ -1,76 +1,97 @@
 # Contributing
 
-Thanks for helping improve Awesome Native SDK.
+Thanks for helping improve Awesome Native SDK. This is a curated list: inclusion is based on usefulness, documentation, and a verifiable connection to [Vercel Labs Native SDK](https://github.com/vercel-labs/native), not popularity.
 
-This list is for high-quality resources that help people build with Vercel Labs Native SDK. Keep it curated. A smaller useful list is better than a large noisy one.
+## Ways to Contribute
 
-## Adding an Entry
+- Open a pull request to add or update an entry.
+- Use the [project suggestion form](https://github.com/henryoman/awesome-native-sdk/issues/new?template=project-suggestion.yml) if you found a project but cannot prepare a pull request.
+- Open a regular issue for broken links, moved repositories, or incorrect descriptions.
 
-- Make sure the resource is directly about Native SDK or is a real app, example, package, tool, theme, or integration built for Native SDK.
-- Add the entry to the most specific existing section.
-- Add a new section only when there are several entries that clearly belong together.
-- Use one entry per pull request when possible.
-- Do not add duplicates.
-- Do not add your own project unless it is public, documented, and useful to other Native SDK developers.
+Project owners are welcome to submit their own work. Please disclose that you are the owner or maintainer in the pull request.
 
-## Quality Standards
+## What Qualifies
 
-Entries should be:
+An entry must be:
 
-- Publicly accessible.
-- Actively useful, not just a placeholder repository.
-- Documented well enough that someone can understand what it does.
-- Specific to Native SDK.
-- Stable enough to recommend.
+- Publicly accessible without an account or private invitation.
+- Directly about Native SDK, or built with the official Vercel Labs Native SDK repository or package.
+- More than an empty scaffold, private experiment, announcement, or placeholder.
+- Documented well enough to explain what it does, which platforms it supports, and how Native SDK is used.
+- Stable enough for another person to run, install, study, or reuse.
+- Licensed or accompanied by clear usage terms when it contains reusable code.
 
-Entries should not be:
+For apps, the repository or project page should provide visible evidence that it uses Native SDK. Good evidence includes an `app.zon`, Native SDK dependency, source code, build instructions, screenshots, or a release/download page.
 
-- Archived or abandoned.
-- Empty scaffolds or private experiments.
-- Mostly unrelated projects that only mention Native SDK.
-- Paid-only resources with no useful public material.
-- Marketing pages without technical value.
+Older `zero-native` projects and forks are considered only when they still work with the current official Native SDK or clearly provide reusable technical value. A name match alone is not enough.
 
-## Entry Format
+Do not submit:
+
+- Archived, abandoned, inaccessible, or link-only projects.
+- Projects that merely mention Native SDK.
+- Generic Zig, desktop, WebView, React Native, or Vercel AI SDK projects.
+- Paid-only resources with no useful public documentation.
+- Affiliate links, tracking URLs, referral codes, or marketing copy.
+- Duplicate entries or several links to the same project.
+
+## Choose a Section
+
+- `Official` — official Native SDK links maintained by Vercel Labs.
+- `Packages` — installable packages built specifically for Native SDK.
+- `Framework Integrations` — frontend and WebView integrations.
+- `Apps` — usable public applications built with Native SDK.
+- `Examples` — focused demos, starters, and learning projects.
+- `Theme Packs` — themes and theme-related resources.
+- `Tooling` — CLIs, editor support, automation, and developer tools.
+
+Add a new section only when several qualifying entries clearly need one.
+
+## Add an Entry
+
+1. Fork the repository and create a branch.
+2. Add the entry to the most specific section in `README.md`.
+3. Keep entries alphabetized by project name within that section.
+4. Use one project per pull request when possible.
+5. Run the list checks.
+6. Open a pull request and complete the provided checklist.
 
 Use this format:
 
 ```md
-- [Name](https://example.com#readme) - Clear, objective description.
+- [Name](https://github.com/owner/repository#readme) - Clear, objective description.
 ```
 
-Rules:
+Entry rules:
 
-- Use a direct URL.
-- Use `#readme` for GitHub repositories when appropriate.
-- Start descriptions with a capital letter.
-- End descriptions with a period.
-- Keep descriptions short and factual.
-- Do not start the description by repeating the entry name.
-- Do not use hype words like "best", "awesome", "amazing", or "ultimate".
+- Link directly to the canonical project page or repository.
+- Use `#readme` for a GitHub repository when appropriate.
+- Start the description with a capital letter and end it with a period.
+- Explain what the project does and how it uses Native SDK.
+- Mention supported platforms when that information is useful.
+- Keep the description short, factual, and free of hype.
+- Do not repeat the project name at the start of the description.
+- Do not add stars, badges, release dates, or subjective claims.
 
-## Sections
+## Validate Your Change
 
-- `Official` is for official Native SDK links.
-- `Packages` is for installable Native SDK packages.
-- `Core APIs` is for main SDK APIs and documentation.
-- `Framework Integrations` is for official frontend/WebView integration resources.
-- `Apps` is for public apps built with Native SDK.
-- `Examples` is for examples and demos.
-- `Themes` is for theme packs and theme tooling.
-- `Tooling` is for CLIs, editor support, automation, and developer tools.
+Run the same pinned check used by continuous integration:
+
+```sh
+npx --yes awesome-lint@2.3.0
+```
+
+Also open every URL you added and confirm it is public and points to the intended page.
 
 ## Pull Request Checklist
 
-Before opening a pull request:
+Before submitting, confirm that:
 
-- Check that the link works.
-- Check that the entry belongs in the selected section.
-- Keep entries alphabetized within a section unless there is a clear reason not to.
-- Run:
+- The project meets every requirement in **What Qualifies**.
+- The linked page explicitly shows its Native SDK connection.
+- The entry is in the correct section and alphabetized.
+- The description is factual and follows the required format.
+- All added links work without signing in.
+- `npx --yes awesome-lint@2.3.0` passes.
+- You disclosed whether you own or maintain the submitted project.
 
-```sh
-bunx awesome-lint
-```
-
-If `awesome-lint` reports a problem, fix it before submitting.
+Maintainers may edit descriptions for consistency, request stronger evidence, move an entry to a different section, or decline entries that do not yet meet the curation standard. Inclusion is not an endorsement and may be revisited if a project becomes unavailable or unmaintained.
