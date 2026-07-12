@@ -5,7 +5,7 @@ Thanks for helping improve Awesome Native SDK. This is a curated list: inclusion
 ## Ways to Contribute
 
 - Open a pull request to add or update an entry.
-- Use the [project suggestion form](https://github.com/henryoman/awesome-native-sdk/issues/new?template=project-suggestion.yml) if you found a project but cannot prepare a pull request.
+- Use the [project suggestion form](https://github.com/henryoman/awesome-vercel-native/issues/new?template=project-suggestion.yml) if you found a project but cannot prepare a pull request.
 - Open a regular issue for broken links, moved repositories, or incorrect descriptions.
 
 Project owners are welcome to submit their own work. Please disclose that you are the owner or maintainer in the pull request.
