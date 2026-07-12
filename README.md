@@ -6,9 +6,9 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
 </p>
 
-> Native desktop apps, examples, themes, and resources built around Vercel Labs Native SDK.
+> A community-curated collection of apps, examples, themes, and tools built with [Native SDK](https://github.com/vercel-labs/native#readme), an open-source project from [Vercel Labs](https://github.com/vercel-labs).
 
-[Vercel Labs Native SDK](https://native-sdk.dev) is a toolkit for building desktop apps with Zig, native-rendered UI, GPU surfaces, WebViews, automation, packaging, and an `app.zon` manifest.
+[Native SDK](https://native-sdk.dev) is Vercel's open-source toolkit for building fast, lightweight desktop apps with Zig, native-rendered interfaces, GPU surfaces, WebViews, automation, cross-platform packaging, and an `app.zon` manifest.
 
 ## Contents
 
@@ -94,3 +94,7 @@
 ## Contributing
 
 Built something with Native SDK? Read the [contribution guide](contributing.md) before opening a pull request, or [suggest a project](https://github.com/henryoman/awesome-vercel-native/issues/new?template=project-suggestion.yml) if you found something that should be reviewed.
+
+<p align="center">
+  <a href="https://x.com/ctatedev/status/2052907884728467699"><u>Join the conversation</u></a>
+</p>
