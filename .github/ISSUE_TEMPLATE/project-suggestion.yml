@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this form when you found a project but cannot open a pull request. Project owners should normally follow the contribution guide and submit a pull request.
+        Use this form when you found a project but cannot open a pull request. Read the [curation rules](https://github.com/henryoman/awesome-vercel-native/blob/main/rules.md) before submitting. Generic Zig and frontend libraries are outside this list's scope. Project owners should normally follow the contribution guide and submit a pull request.
   - type: input
     id: name
     attributes:
@@ -15,11 +15,22 @@ body:
       placeholder: Example App
     validations:
       required: true
+  - type: dropdown
+    id: library_scope
+    attributes:
+      label: Library or package scope
+      description: Libraries and packages qualify only when their main purpose is extending Native SDK.
+      options:
+        - Not a library or package
+        - Native SDK-specific library or package
+        - Not sure
+    validations:
+      required: true
   - type: input
     id: url
     attributes:
       label: Canonical public URL
-      description: Link to the source repository or primary project page.
+      description: Link to the source repository or primary project page. For a skill, link directly to its canonical SKILL.md.
       placeholder: https://github.com/owner/repository
     validations:
       required: true
@@ -31,7 +42,8 @@ body:
         - Apps
         - Examples
         - Framework Integrations
-        - Packages
+        - Libraries & Packages
+        - Skills
         - Theme Packs
         - Tooling
         - Not sure
@@ -65,6 +77,8 @@ body:
         - label: The project and evidence are publicly accessible without signing in.
           required: true
         - label: The project is documented and is more than an empty scaffold, placeholder, or announcement.
+          required: true
+        - label: I read `rules.md` and confirmed the project fits this list's Native SDK-specific scope.
           required: true
         - label: I searched the README and confirmed the project is not already listed.
           required: true

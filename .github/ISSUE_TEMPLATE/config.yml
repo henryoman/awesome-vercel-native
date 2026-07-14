@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
+  - name: Curation rules
+    url: https://github.com/henryoman/awesome-vercel-native/blob/main/rules.md
+    about: Check project eligibility, section definitions, and the Native SDK-specific library rule.
   - name: Contribution guide
     url: https://github.com/henryoman/awesome-vercel-native/blob/main/contributing.md
     about: Read the eligibility rules and pull request instructions before submitting a project.

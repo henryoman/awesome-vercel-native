@@ -2,6 +2,8 @@
 
 Thanks for helping improve Awesome Native SDK. This is a curated list: inclusion is based on usefulness, documentation, and a verifiable connection to [Vercel Labs Native SDK](https://github.com/vercel-labs/native), not popularity.
 
+The canonical eligibility and section policy lives in [rules.md](rules.md). Read it before suggesting a project or opening a pull request. When this guide and the rules appear to differ, `rules.md` controls.
+
 ## Ways to Contribute
 
 - Open a pull request to add or update an entry.
@@ -12,7 +14,7 @@ Project owners are welcome to submit their own work. Please disclose that you ar
 
 ## What Qualifies
 
-An entry must be:
+Every submission must satisfy all applicable requirements in [the curation rules](rules.md). In summary, an entry must be:
 
 - Publicly accessible without an account or private invitation.
 - Directly about Native SDK, or built with the official Vercel Labs Native SDK repository or package.
@@ -24,6 +26,8 @@ An entry must be:
 For apps, the repository or project page should provide visible evidence that it uses Native SDK. Good evidence includes an `app.zon`, Native SDK dependency, source code, build instructions, screenshots, or a release/download page.
 
 Older `zero-native` projects and forks are considered only when they still work with the current official Native SDK or clearly provide reusable technical value. A name match alone is not enough.
+
+Libraries and packages receive an additional scope check: they must be designed specifically for Native SDK and provide reusable Native SDK functionality. A generic Zig or frontend library does not qualify merely because a Native SDK app uses it. See [Libraries & Packages](rules.md#libraries--packages) for the complete rule and examples.
 
 Do not submit:
 
@@ -37,10 +41,11 @@ Do not submit:
 ## Choose a Section
 
 - `Official` — official Native SDK links maintained by Vercel Labs.
-- `Packages` — installable packages built specifically for Native SDK.
+- `Libraries & Packages` — reusable, installable libraries or packages designed specifically for Native SDK.
 - `Framework Integrations` — frontend and WebView integrations.
 - `Apps` — usable public applications built with Native SDK.
 - `Examples` — focused demos, starters, and learning projects.
+- `Skills` — installable agent skills designed specifically for Native SDK development. Link directly to the skill's canonical `SKILL.md`.
 - `Theme Packs` — themes and theme-related resources.
 - `Tooling` — CLIs, editor support, automation, and developer tools.
 
@@ -64,6 +69,7 @@ Use this format:
 Entry rules:
 
 - Link directly to the canonical project page or repository.
+- For a skill, link directly to its canonical `SKILL.md`.
 - Use `#readme` for a GitHub repository when appropriate.
 - Start the description with a capital letter and end it with a period.
 - Explain what the project does and how it uses Native SDK.
@@ -86,7 +92,10 @@ Also open every URL you added and confirm it is public and points to the intende
 
 Before submitting, confirm that:
 
+- You read and followed [rules.md](rules.md).
 - The project meets every requirement in **What Qualifies**.
+- A library or package is Native SDK-specific rather than a generic Zig or frontend dependency.
+- A skill links directly to its canonical `SKILL.md` rather than a registry page, directory, or bundled reference file.
 - The linked page explicitly shows its Native SDK connection.
 - The entry is in the correct section and alphabetized.
 - The description is factual and follows the required format.

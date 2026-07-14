@@ -13,10 +13,11 @@
 ## Contents
 
 - [Official](#official)
-- [Packages](#packages)
+- [Libraries & Packages](#libraries--packages)
 - [Framework Integrations](#framework-integrations)
 - [Apps](#apps)
 - [Examples](#examples)
+- [Skills](#skills)
 - [Theme Packs](#theme-packs)
 - [Tooling](#tooling)
 
@@ -25,28 +26,32 @@
 - [Native SDK](https://github.com/vercel-labs/native#readme) - Source repository for the Vercel Labs Native SDK.
 - [Quick Start](https://native-sdk.dev/quick-start) - Install the CLI, create an app, run it locally, and build it.
 
-## Packages
+## Libraries & Packages
 
 - [Native SDK Package](https://native-sdk.dev/packages) - NPM package and CLI distribution for the SDK.
 
 ## Framework Integrations
 
 - [Frontend Integration](https://native-sdk.dev/frontend) - Use existing web frontends in Native SDK apps.
-- [WebViews](https://native-sdk.dev/webviews) - Embed and compose WebView surfaces alongside native UI.
 - [Next.js Example](https://github.com/vercel-labs/native/tree/main/examples/next#readme) - Native SDK shell around a Next.js frontend.
+- [Qwik Example](https://github.com/Rillwz/zero-native-qwik/tree/main/examples/qwik#readme) - Legacy Zero Native integration for macOS and Linux with a Qwik and Vite frontend, managed development server and production assets, and a Zig system-WebView shell.
 - [React Example](https://github.com/vercel-labs/native/tree/main/examples/react#readme) - Native SDK shell around a React frontend.
+- [SolidJS Template](https://github.com/jhovadev/zero-native-basic-template-bun-solidjs#readme) - Cross-platform Zero Native starter using SolidJS, Bun, Vite, a system WebView, Zig bridge commands, testing, and packaging workflows.
 - [Svelte Example](https://github.com/vercel-labs/native/tree/main/examples/svelte#readme) - Native SDK shell around a Svelte frontend.
 - [Vite Integration](https://github.com/vercel-labs/native/pull/98) - Native SDK shell for an existing Vite project, with frontend configuration, environment-based source selection, and development origin setup.
 - [Vue Example](https://github.com/vercel-labs/native/tree/main/examples/vue#readme) - Native SDK shell around a Vue frontend.
+- [WebViews](https://native-sdk.dev/webviews) - Embed and compose WebView surfaces alongside native UI.
 
 ## Apps
 
+- [API Lab](https://github.com/olgunozoktas/api-lab#readme) - Native macOS API testing workbench using Zero Native, a React WebView, and Zig bridge handlers for CORS-free HTTP, gRPC, mock servers, filesystem access, and other local tooling.
 - [Audiobook Maker](https://github.com/lichen0114/audiobook-maker/tree/main/desktop#readme) - Native macOS audiobook generation app for a Kokoro TTS backend using Native SDK markup, Zig state, native file picking, and bundled Python, MLX, FFmpeg, and espeak runtime dependencies.
 - [Batshit](https://github.com/SirBadfish/batshit#readme) - Self-hosted AI workspace shipping a packaged macOS app built with a Zero Native system WebView shell and local service supervisor.
 - [CheeseJS](https://github.com/PixelDroid19/CheeseJs#readme) - Cross-platform native code workbench using Zero Native, Zig, React, Monaco, system WebViews, and extensible language and runtime packages.
 - [Chutes E2EE Native SDK Proof](https://github.com/alex-drocks/chutes-e2ee-chat-nativesdk#readme) - Native-rendered proof app for encrypted Chutes.ai chat requests using Zig, Native markup, `fx.fetch`, and Native SDK automation.
 - [Co Translator](https://github.com/bytonylee/co-translator#readme) - Real-time translation app for macOS and Linux using Zero Native, React, Zig, and an OpenAI Realtime sidecar that keeps API keys outside the renderer.
 - [Codex Pet Share](https://github.com/portons/codex-pet-share#readme) - Self-hostable pixel-pet gallery with a packaged macOS Zero Native client, production WebView integration, and native notification support.
+- [Component Cleaner](https://github.com/clpowe/component-cleaner#readme) - Native macOS Vue component scanner using Zero Native, a Vue WebView, and Zig bridge handlers to find unused Vue, TSX, and JSX components with whole-word and kebab-case matching.
 - [Compressor](https://github.com/sonnylazuardi/compressor#readme) - Native Windows image compressor using Native markup, Zig state, native file dialogs, drag and drop, and Bun-powered WebP encoding.
 - [Crystal LLM](https://github.com/TheCulliganMan/crystal-llm#readme) - Pokemon Crystal runtime and LLM gameplay toolkit with a packaged Zero Native desktop interface for its local web runtime.
 - [GIFBin](https://github.com/henryoman/gifbin#readme) - Native GIF creation app using a Native SDK GPU surface, canvas widgets, Zig state, drag and drop, native dialogs, image decoding, and GIF export.
@@ -66,14 +71,20 @@
 
 ## Examples
 
-- [Official Examples](https://github.com/vercel-labs/native/tree/main/examples#readme) - Native SDK examples covering native UI, WebViews, framework shells, GPU surfaces, mobile embedding, and platform capabilities.
+- [AI Chat (TypeScript)](https://github.com/vercel-labs/native/tree/main/examples/ai-chat-ts#readme) - Official zero-Zig example using a TypeScript app core, Native markup, an OpenAI-compatible fetch effect, environment-supplied configuration, and deterministic record and replay.
 - [Calculator](https://github.com/vercel-labs/native/tree/main/examples/calculator#readme) - Small native UI app with markup, keyboard input, chrome shortcuts, and theming.
 - [Canvas Preview](https://github.com/vercel-labs/native/tree/main/examples/canvas-preview#readme) - Mixed native canvas and WebView panes in one window.
 - [GPU Dashboard](https://github.com/vercel-labs/native/tree/main/examples/gpu-dashboard#readme) - Dense native dashboard UI with GPU-rendered widgets.
 - [Hello Native](https://github.com/qiuzhanghua/hello-native#readme) - Focused native-rendered counter example using Native SDK markup, a Zig model and update loop, GPU surfaces, hot reload, and UI tests.
-- [∅M〇ᶻ Native Biu Demo](https://github.com/mindon/native-biu-demo#readme) - Minimal zero-config Native SDK demo using `.native` markup, Zig state, hot reload, testing, and the Biu/Bun ecosystem.
 - [Notes](https://github.com/vercel-labs/native/tree/main/examples/notes#readme) - Persistence example with effects, restore on boot, dialogs, and search.
+- [Official Examples](https://github.com/vercel-labs/native/tree/main/examples#readme) - Native SDK examples covering native UI, WebViews, framework shells, GPU surfaces, mobile embedding, and platform capabilities.
 - [Soundboard](https://github.com/vercel-labs/native/tree/main/examples/soundboard#readme) - Native media-style interface with cover art, context menus, timers, and custom theming.
+- [Split Collapse](https://github.com/vercel-labs/native/tree/main/examples/split-collapse#readme) - Official native-rendered example comparing runtime, markup-declared, and manual pane-collapse animation while measuring frame pacing and optional WebView reflow.
+- [∅M〇ᶻ Native Biu Demo](https://github.com/mindon/native-biu-demo#readme) - Minimal zero-config Native SDK demo using `.native` markup, Zig state, hot reload, testing, and the Biu/Bun ecosystem.
+
+## Skills
+
+- [Native SDK](https://github.com/vercel-labs/native/blob/main/skills/native-sdk/SKILL.md) - Official installable skill that teaches coding agents to discover and load version-matched Native SDK guidance from the CLI.
 
 ## Theme Packs
 
@@ -98,13 +109,12 @@
 
 - [Native SDK CLI](https://native-sdk.dev/cli) - Commands for initializing, developing, checking, testing, building, packaging, and automating apps.
 - [Native Markup Extension](https://github.com/vercel-labs/native/tree/main/editors/native-markup#readme) - Editor support for `.native` markup.
-- [Agent Skills](https://native-sdk.dev/skills) - Native SDK guidance for AI agents working with Native SDK projects.
 - [Theme Installer](https://github.com/henryoman/awesome-vercel-native/blob/main/scripts/install-theme.sh) - Small shell installer for copying a theme Zig module into an app-local `themes/` directory.
 - [Theme Gallery](https://github.com/henryoman/awesome-vercel-native/tree/main/tools/theme-gallery#readme) - Minimal Svelte gallery for browsing the theme packs in this repository.
 
 ## Contributing
 
-Built something with Native SDK? Read the [contribution guide](contributing.md) before opening a pull request, or [suggest a project](https://github.com/henryoman/awesome-vercel-native/issues/new?template=project-suggestion.yml) if you found something that should be reviewed.
+Built something with Native SDK? Read the [curation rules](rules.md) and [contribution guide](contributing.md) before opening a pull request, or [suggest a project](https://github.com/henryoman/awesome-vercel-native/issues/new?template=project-suggestion.yml) if you found something that should be reviewed.
 
 <p align="center">
   <a href="https://x.com/ctatedev/status/2052907884728467699"><u>Join the conversation</u></a>

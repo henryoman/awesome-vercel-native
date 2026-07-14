@@ -15,9 +15,12 @@ Link to the public source, `app.zon`, Native SDK dependency, documentation, scre
 
 ## Checklist
 
+- [ ] I read and followed [`rules.md`](https://github.com/henryoman/awesome-vercel-native/blob/main/rules.md).
 - [ ] The project is public and accessible without signing in.
 - [ ] The linked page clearly shows its connection to Vercel Labs Native SDK.
 - [ ] The project is documented and is more than an empty scaffold or announcement.
+- [ ] If this is a library or package, it provides reusable functionality designed specifically for Native SDK rather than generic Zig or frontend functionality.
+- [ ] If this is a skill, the entry links directly to its canonical `SKILL.md` rather than a registry page, directory, or bundled reference file.
 - [ ] The entry is in the most specific section and alphabetized by name.
 - [ ] The description is short, factual, capitalized, and ends with a period.
 - [ ] I opened every added link and confirmed it works.
