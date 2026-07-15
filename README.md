@@ -24,6 +24,7 @@
 ## Official
 
 - [Native SDK](https://github.com/vercel-labs/native#readme) - Source repository for the Vercel Labs Native SDK.
+- [Philosophy](https://native-sdk.dev/introduction) - Design principles behind Native SDK's native rendering, explicit state model, simple authoring, customizable defaults, and agent-driven workflows.
 - [Quick Start](https://native-sdk.dev/quick-start) - Install the CLI, create an app, run it locally, and build it.
 
 ## Libraries & Packages
