@@ -17,7 +17,7 @@ Project owners are welcome to submit their own work. Please disclose that you ar
 Every submission must satisfy all applicable requirements in [the curation rules](rules.md). In summary, an entry must be:
 
 - Publicly accessible without an account or private invitation.
-- Directly about Native SDK, or built with the official Vercel Labs Native SDK repository or package.
+- Directly about Native SDK, or built with the official Vercel Labs Native SDK repository or package; Zero Native projects do not qualify.
 - More than an empty scaffold, private experiment, announcement, or placeholder.
 - Documented well enough to explain what it does, which platforms it supports, and how Native SDK is used.
 - Stable enough for another person to run, install, study, or reuse.
@@ -25,7 +25,7 @@ Every submission must satisfy all applicable requirements in [the curation rules
 
 For apps, the repository or project page should provide visible evidence that it uses Native SDK. Good evidence includes an `app.zon`, Native SDK dependency, source code, build instructions, screenshots, or a release/download page.
 
-Older `zero-native` projects and forks are considered only when they still work with the current official Native SDK or clearly provide reusable technical value. A name match alone is not enough.
+Projects built against Zero Native do not qualify. Forks qualify only when they remain compatible with the official Vercel Labs Native SDK and add meaningful technical value.
 
 Libraries and packages receive an additional scope check: they must be designed specifically for Native SDK and provide reusable Native SDK functionality. A generic Zig or frontend library does not qualify merely because a Native SDK app uses it. See [Libraries & Packages](rules.md#libraries--packages) for the complete rule and examples.
 
