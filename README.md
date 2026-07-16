@@ -118,5 +118,5 @@
 Built something with Native SDK? Read the [curation rules](rules.md) and [contribution guide](contributing.md) before opening a pull request, or [suggest a project](https://github.com/henryoman/awesome-vercel-native/issues/new?template=project-suggestion.yml) if you found something that should be reviewed.
 
 <p align="center">
-  <a href="https://x.com/ctatedev/status/2052907884728467699"><u>Join the conversation</u></a>
+  <a href="https://x.com/ctatedev/status/2075016514860650685"><u>Join the conversation</u></a>
 </p>
