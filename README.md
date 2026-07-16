@@ -35,9 +35,7 @@
 
 - [Frontend Integration](https://native-sdk.dev/frontend) - Use existing web frontends in Native SDK apps.
 - [Next.js Example](https://github.com/vercel-labs/native/tree/main/examples/next#readme) - Native SDK shell around a Next.js frontend.
-- [Qwik Example](https://github.com/Rillwz/zero-native-qwik/tree/main/examples/qwik#readme) - Legacy Zero Native integration for macOS and Linux with a Qwik and Vite frontend, managed development server and production assets, and a Zig system-WebView shell.
 - [React Example](https://github.com/vercel-labs/native/tree/main/examples/react#readme) - Native SDK shell around a React frontend.
-- [SolidJS Template](https://github.com/jhovadev/zero-native-basic-template-bun-solidjs#readme) - Cross-platform Zero Native starter using SolidJS, Bun, Vite, a system WebView, Zig bridge commands, testing, and packaging workflows.
 - [Svelte Example](https://github.com/vercel-labs/native/tree/main/examples/svelte#readme) - Native SDK shell around a Svelte frontend.
 - [Vite Integration](https://github.com/vercel-labs/native/pull/98) - Native SDK shell for an existing Vite project, with frontend configuration, environment-based source selection, and development origin setup.
 - [Vue Example](https://github.com/vercel-labs/native/tree/main/examples/vue#readme) - Native SDK shell around a Vue frontend.
@@ -45,28 +43,15 @@
 
 ## Apps
 
-- [API Lab](https://github.com/olgunozoktas/api-lab#readme) - Native macOS API testing workbench using Zero Native, a React WebView, and Zig bridge handlers for CORS-free HTTP, gRPC, mock servers, filesystem access, and other local tooling.
 - [Audiobook Maker](https://github.com/lichen0114/audiobook-maker/tree/main/desktop#readme) - Native macOS audiobook generation app for a Kokoro TTS backend using Native SDK markup, Zig state, native file picking, and bundled Python, MLX, FFmpeg, and espeak runtime dependencies.
-- [Batshit](https://github.com/SirBadfish/batshit#readme) - Self-hosted AI workspace shipping a packaged macOS app built with a Zero Native system WebView shell and local service supervisor.
-- [CheeseJS](https://github.com/PixelDroid19/CheeseJs#readme) - Cross-platform native code workbench using Zero Native, Zig, React, Monaco, system WebViews, and extensible language and runtime packages.
 - [Chutes E2EE Native SDK Proof](https://github.com/alex-drocks/chutes-e2ee-chat-nativesdk#readme) - Native-rendered proof app for encrypted Chutes.ai chat requests using Zig, Native markup, `fx.fetch`, and Native SDK automation.
-- [Co Translator](https://github.com/bytonylee/co-translator#readme) - Real-time translation app for macOS and Linux using Zero Native, React, Zig, and an OpenAI Realtime sidecar that keeps API keys outside the renderer.
-- [Codex Pet Share](https://github.com/portons/codex-pet-share#readme) - Self-hostable pixel-pet gallery with a packaged macOS Zero Native client, production WebView integration, and native notification support.
-- [Component Cleaner](https://github.com/clpowe/component-cleaner#readme) - Native macOS Vue component scanner using Zero Native, a Vue WebView, and Zig bridge handlers to find unused Vue, TSX, and JSX components with whole-word and kebab-case matching.
 - [Compressor](https://github.com/sonnylazuardi/compressor#readme) - Native Windows image compressor using Native markup, Zig state, native file dialogs, drag and drop, and Bun-powered WebP encoding.
-- [Crystal LLM](https://github.com/TheCulliganMan/crystal-llm#readme) - Pokemon Crystal runtime and LLM gameplay toolkit with a packaged Zero Native desktop interface for its local web runtime.
 - [GIFBin](https://github.com/henryoman/gifbin#readme) - Native GIF creation app using a Native SDK GPU surface, canvas widgets, Zig state, drag and drop, native dialogs, image decoding, and GIF export.
 - [Mac Cleaner](https://github.com/jellydn/mac-cleaner#readme) - Native macOS cleaner dashboard using Native SDK markup and Zig to run Mole status, cleanup, optimization, purge, and history commands.
-- [Meeting Companion](https://github.com/malakhov-dmitrii/meeting-companion#readme) - Native macOS meeting transcription app using Zero Native, Zig, ScreenCaptureKit, AVFoundation, and a local Deepgram streaming sidecar.
-- [My Pots](https://github.com/LakhindarPal/my_pots#readme) - Cross-platform savings tracker for Linux and Windows using Zero Native, Zig, SolidJS, and a persistent local SQLite database.
 - [OCPP DebugKit Studio](https://github.com/ocpp-debugkit/studio#readme) - Early-stage native OCPP charging-session debugger built with Zig and Native SDK, with macOS/Linux CI and automation-driven smoke testing.
-- [Petdesk Mood by Token](https://github.com/BlueWhalexh/pet-desk-moodBytoken#readme) - Native macOS desktop pet that uses a Zero Native shell and local coding-agent usage data to animate token-driven mood states.
-- [Petdex](https://github.com/crafter-station/petdex#readme) - Pet gallery, CLI, and floating macOS desktop companion built with Zig and a Zero Native fork for transparent always-on-top windows.
 - [Press](https://github.com/Lulzx/press#readme) - Native macOS video compressor using Native SDK, Zig, drag and drop, file dialogs, live FFmpeg progress, and quality presets.
 - [Project Orbit](https://github.com/Tarachand-Gupta/project-orbit#readme) - AI sandbox game shipping a macOS and Linux desktop shell built with Native SDK, a system WebView, and a Zig bridge.
 - [Signet](https://github.com/zig-nostr/signet#readme) - Native macOS Nostr signer using a Native SDK and Zig approval interface for NIP-46 requests handled by an isolated daemon.
-- [Social Stockfish](https://github.com/Lulzx/social-stockfish#readme) - Conversation-analysis app with a lightweight Zero Native macOS client for its React interface and local AI backend.
-- [Talky](https://github.com/WinstonFassett/talky#readme) - Voice interface for AI agents with a patched Zero Native macOS shell that connects to its local daemon and WebView UI.
 - [Token Tach](https://github.com/phall1/token-tach#readme) - Native macOS menu bar app for AI coding-agent token usage using Native SDK, Zig, Metal rendering, local ledger tailing, and a vendored Native SDK fork for popover and status-item support.
 - [Widgoal](https://github.com/eyadhammouda/widgoal#readme) - Native macOS football score widget using Native SDK native views, a Metal GPU surface, ESPN score data, league and team following, and live menu bar updates.
 
