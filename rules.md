@@ -19,7 +19,7 @@ Review a candidate in this order:
 Every entry must be:
 
 - Publicly accessible without an account or private invitation.
-- Directly connected to the official Native SDK repository, package, runtime, markup, APIs, or tooling.
+- Built with or designed specifically for the official Vercel Labs Native SDK repository, package, runtime, markup, APIs, or tooling. Projects built against Zero Native or another predecessor or fork do not qualify.
 - More than an empty scaffold, private experiment, announcement, mockup, or placeholder.
 - Documented well enough to explain what it does, which platforms it supports, and how Native SDK is involved.
 - Stable enough for another person to run, install, study, or reuse.
@@ -98,11 +98,9 @@ Each entry must link directly to that canonical `SKILL.md`. Do not link to a reg
 
 First-party Native SDK skills are preferred. A community skill must provide distinct Native SDK-specific guidance and show active maintenance. Generic Zig, TypeScript, frontend, testing, design, or agent-workflow skills do not qualify merely because they may be useful while building an app.
 
-## Legacy Projects and Forks
+## Forks
 
-Projects created under the earlier `zero-native` name may qualify when they still work with the official Native SDK lineage or retain clear, reusable technical value.
-
-A fork must add meaningful functionality, platform support, documentation, or technical value. Unchanged mirrors and lightly renamed copies are excluded.
+A fork of Vercel Labs Native SDK must add meaningful functionality, platform support, documentation, or technical value and remain compatible with the official Native SDK. Unchanged mirrors, lightly renamed copies, and projects built against Zero Native are excluded.
 
 ## Exclusions
 
