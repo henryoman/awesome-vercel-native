@@ -98,11 +98,11 @@ Each entry must link directly to that canonical `SKILL.md`. Do not link to a reg
 
 First-party Native SDK skills are preferred. A community skill must provide distinct Native SDK-specific guidance and show active maintenance. Generic Zig, TypeScript, frontend, testing, design, or agent-workflow skills do not qualify merely because they may be useful while building an app.
 
-## Legacy Projects and Forks
+## Current SDK and Forks
 
-Projects created under the earlier `zero-native` name may qualify when they still work with the official Native SDK lineage or retain clear, reusable technical value.
+Projects must use the current official [`vercel-labs/native`](https://github.com/vercel-labs/native) repository or published Native SDK package. Projects that still depend on superseded predecessors, legacy CLIs, or abandoned forks are excluded until they migrate and document the current integration.
 
-A fork must add meaningful functionality, platform support, documentation, or technical value. Unchanged mirrors and lightly renamed copies are excluded.
+A fork must track a current Native SDK version and add meaningful functionality, platform support, documentation, or technical value. Unchanged mirrors and lightly renamed copies are excluded.
 
 ## Exclusions
 

@@ -78,6 +78,8 @@ body:
           required: true
         - label: The project is documented and is more than an empty scaffold, placeholder, or announcement.
           required: true
+        - label: The project uses the current official `vercel-labs/native` repository or published Native SDK package, not a superseded predecessor or legacy CLI.
+          required: true
         - label: I read `rules.md` and confirmed the project fits this list's Native SDK-specific scope.
           required: true
         - label: I searched the README and confirmed the project is not already listed.

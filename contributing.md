@@ -25,7 +25,7 @@ Every submission must satisfy all applicable requirements in [the curation rules
 
 For apps, the repository or project page should provide visible evidence that it uses Native SDK. Good evidence includes an `app.zon`, Native SDK dependency, source code, build instructions, screenshots, or a release/download page.
 
-Older `zero-native` projects and forks are considered only when they still work with the current official Native SDK or clearly provide reusable technical value. A name match alone is not enough.
+Projects that depend on a superseded predecessor, legacy CLI, or abandoned fork do not qualify. They can be reconsidered after migrating to the current official Native SDK repository or package and documenting that integration.
 
 Libraries and packages receive an additional scope check: they must be designed specifically for Native SDK and provide reusable Native SDK functionality. A generic Zig or frontend library does not qualify merely because a Native SDK app uses it. See [Libraries & Packages](rules.md#libraries--packages) for the complete rule and examples.
 
