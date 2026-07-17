@@ -29,6 +29,7 @@
 
 ## Libraries & Packages
 
+- [Component Catalog](https://native-sdk.dev/components) - Official native-rendered component catalog with Native markup, TypeScript and Zig examples, builder equivalents, generated attribute references, and engine-rendered previews.
 - [Native SDK Package](https://native-sdk.dev/packages) - NPM package and CLI distribution for the SDK.
 
 ## Framework Integrations
@@ -47,11 +48,16 @@
 - [Chutes E2EE Native SDK Proof](https://github.com/alex-drocks/chutes-e2ee-chat-nativesdk#readme) - Native-rendered proof app for encrypted Chutes.ai chat requests using Zig, Native markup, `fx.fetch`, and Native SDK automation.
 - [Compressor](https://github.com/sonnylazuardi/compressor#readme) - Native Windows image compressor using Native markup, Zig state, native file dialogs, drag and drop, and Bun-powered WebP encoding.
 - [GIFBin](https://github.com/henryoman/gifbin#readme) - Native GIF creation app using a Native SDK GPU surface, canvas widgets, Zig state, drag and drop, native dialogs, image decoding, and GIF export.
+- [Maat](https://github.com/lzitser23/maat#readme) - Local-first macOS and Windows visual asset manager using Native SDK, Zig, React, SQLite, native file operations, and a system WebView.
 - [Mac Cleaner](https://github.com/jellydn/mac-cleaner#readme) - Native macOS cleaner dashboard using Native SDK markup and Zig to run Mole status, cleanup, optimization, purge, and history commands.
+- [Mousemove](https://github.com/wjx/mousemove#readme) - Native Windows mouse activity utility using Native SDK canvas rendering, raw input handling, background timers, and a click-through desktop overlay.
 - [OCPP DebugKit Studio](https://github.com/ocpp-debugkit/studio#readme) - Early-stage native OCPP charging-session debugger built with Zig and Native SDK, with macOS/Linux CI and automation-driven smoke testing.
+- [OfficeMachine Music](https://github.com/brianrabil/officemachine/tree/main/apps/music-player#readme) - Local-first macOS music player rendered entirely with Native SDK, with album browsing, search, native menus, cover art, playback controls, and a persistent queue.
+- [OfficeMachine Video](https://github.com/brianrabil/officemachine/tree/main/apps/video-editor#readme) - Local-first video editor using Native SDK, React, Remotion, native project files, local media storage, and an optional AI editing agent.
 - [Press](https://github.com/Lulzx/press#readme) - Native macOS video compressor using Native SDK, Zig, drag and drop, file dialogs, live FFmpeg progress, and quality presets.
 - [Project Orbit](https://github.com/Tarachand-Gupta/project-orbit#readme) - AI sandbox game shipping a macOS and Linux desktop shell built with Native SDK, a system WebView, and a Zig bridge.
 - [Signet](https://github.com/zig-nostr/signet#readme) - Native macOS Nostr signer using a Native SDK and Zig approval interface for NIP-46 requests handled by an isolated daemon.
+- [SkillManager](https://github.com/TudorAndrei/SkillManager#readme) - macOS and Linux agent-skill manager using Native SDK, Zig bridge commands, and a React WebView to discover, install, update, and remove skills.
 - [Token Tach](https://github.com/phall1/token-tach#readme) - Native macOS menu bar app for AI coding-agent token usage using Native SDK, Zig, Metal rendering, local ledger tailing, and a vendored Native SDK fork for popover and status-item support.
 - [Widgoal](https://github.com/eyadhammouda/widgoal#readme) - Native macOS football score widget using Native SDK native views, a Metal GPU surface, ESPN score data, league and team following, and live menu bar updates.
 
