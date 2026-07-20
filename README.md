@@ -23,14 +23,17 @@
 
 ## Official
 
+- [Changelog](https://github.com/vercel-labs/native/blob/main/CHANGELOG.md) - Version-by-version record of Native SDK features, component additions, fixes, and migration notes.
 - [Native SDK](https://github.com/vercel-labs/native#readme) - Source repository for the Vercel Labs Native SDK.
 - [Philosophy](https://native-sdk.dev/introduction) - Design principles behind Native SDK's native rendering, explicit state model, simple authoring, customizable defaults, and agent-driven workflows.
 - [Quick Start](https://native-sdk.dev/quick-start) - Install the CLI, create an app, run it locally, and build it.
 
 ## Libraries & Packages
 
-- [Component Catalog](https://native-sdk.dev/components) - Official native-rendered component catalog with Native markup, TypeScript and Zig examples, builder equivalents, generated attribute references, and engine-rendered previews.
+- [Component Catalog](https://native-sdk.dev/components) - Official catalog of the 46 documented native-rendered component families, with Native markup, TypeScript and Zig examples, builder equivalents, generated attribute references, and engine-rendered previews.
+- [Media Surface](https://native-sdk.dev/components/media-surface) - Native SDK 0.5.3 component for presenting externally produced RGBA textures such as video, camera, or custom-renderer frames through a model-bound surface ID.
 - [Native SDK Package](https://native-sdk.dev/packages) - NPM package and CLI distribution for the SDK.
+- [Tooltip](https://native-sdk.dev/components/tooltip) - Runtime-managed anchored tooltip with hover intent, keyboard-focus behavior, configurable delay, and deterministic automation support.
 
 ## Framework Integrations
 
@@ -48,12 +51,17 @@
 - [Chutes E2EE Native SDK Proof](https://github.com/alex-drocks/chutes-e2ee-chat-nativesdk#readme) - Native-rendered proof app for encrypted Chutes.ai chat requests using Zig, Native markup, `fx.fetch`, and Native SDK automation.
 - [Compressor](https://github.com/sonnylazuardi/compressor#readme) - Native Windows image compressor using Native markup, Zig state, native file dialogs, drag and drop, and Bun-powered WebP encoding.
 - [GIFBin](https://github.com/henryoman/gifbin#readme) - Native GIF creation app using a Native SDK GPU surface, canvas widgets, Zig state, drag and drop, native dialogs, image decoding, and GIF export.
+- [Hyper Term](https://github.com/phodal/hyper-term#readme) - macOS-first terminal and coding-agent workspace using Native SDK for native chrome, a Rust-owned PTY bridge, and an anchored system WebView for terminal rendering.
+- [Inbox Zero Mail](https://github.com/inbox-zero/inbox-zero-mail/tree/main/NativeApp#readme) - Cross-platform Gmail and Outlook client rendered with Native SDK and Zig, with OAuth, native multi-window composition, search, message actions, and deterministic tests.
+- [Lavalamp](https://github.com/root-daemon/lavalamp-rewritten#readme) - Local AI coding assistant with a Native SDK desktop client for sessions, streamed conversations, tool results, permissions, questions, and composer workflows.
 - [Maat](https://github.com/lzitser23/maat#readme) - Local-first macOS and Windows visual asset manager using Native SDK, Zig, React, SQLite, native file operations, and a system WebView.
 - [Mac Cleaner](https://github.com/jellydn/mac-cleaner#readme) - Native macOS cleaner dashboard using Native SDK markup and Zig to run Mole status, cleanup, optimization, purge, and history commands.
 - [Mousemove](https://github.com/wjx/mousemove#readme) - Native Windows mouse activity utility using Native SDK canvas rendering, raw input handling, background timers, and a click-through desktop overlay.
 - [OCPP DebugKit Studio](https://github.com/ocpp-debugkit/studio#readme) - Early-stage native OCPP charging-session debugger built with Zig and Native SDK, with macOS/Linux CI and automation-driven smoke testing.
 - [OfficeMachine Music](https://github.com/brianrabil/officemachine/tree/main/apps/music-player#readme) - Local-first macOS music player rendered entirely with Native SDK, with album browsing, search, native menus, cover art, playback controls, and a persistent queue.
 - [OfficeMachine Video](https://github.com/brianrabil/officemachine/tree/main/apps/video-editor#readme) - Local-first video editor using Native SDK, React, Remotion, native project files, local media storage, and an optional AI editing agent.
+- [Petdex Desktop](https://github.com/crafter-station/petdex/tree/main/packages/petdex-desktop-native#readme) - Native desktop-pet renderer using Native SDK, atlas-backed animation, model-driven pet states, and automation-based screenshot testing without a WebView or sidecar.
+- [Plaza](https://github.com/zig-nostr/plaza#readme) - Fast, local-first Nostr client built with Zig and Native SDK, with native-rendered feeds, profiles, relays, search, and cross-platform CI.
 - [Press](https://github.com/Lulzx/press#readme) - Native macOS video compressor using Native SDK, Zig, drag and drop, file dialogs, live FFmpeg progress, and quality presets.
 - [Project Orbit](https://github.com/Tarachand-Gupta/project-orbit#readme) - AI sandbox game shipping a macOS and Linux desktop shell built with Native SDK, a system WebView, and a Zig bridge.
 - [Signet](https://github.com/zig-nostr/signet#readme) - Native macOS Nostr signer using a Native SDK and Zig approval interface for NIP-46 requests handled by an isolated daemon.
@@ -70,6 +78,7 @@
 - [Hello Native](https://github.com/qiuzhanghua/hello-native#readme) - Focused native-rendered counter example using Native SDK markup, a Zig model and update loop, GPU surfaces, hot reload, and UI tests.
 - [Notes](https://github.com/vercel-labs/native/tree/main/examples/notes#readme) - Persistence example with effects, restore on boot, dialogs, and search.
 - [Official Examples](https://github.com/vercel-labs/native/tree/main/examples#readme) - Native SDK examples covering native UI, WebViews, framework shells, GPU surfaces, mobile embedding, and platform capabilities.
+- [PULSE](https://github.com/dirnbauer/webconsulting-typo3-lab/tree/main/apps/news-native-studio#readme) - Native-rendered TYPO3 editorial-cockpit prototype using Zig and Native markup to demonstrate newsroom workflows, context menus, command navigation, and deterministic UI tests without a WebView.
 - [Soundboard](https://github.com/vercel-labs/native/tree/main/examples/soundboard#readme) - Native media-style interface with cover art, context menus, timers, and custom theming.
 - [Split Collapse](https://github.com/vercel-labs/native/tree/main/examples/split-collapse#readme) - Official native-rendered example comparing runtime, markup-declared, and manual pane-collapse animation while measuring frame pacing and optional WebView reflow.
 - [∅M〇ᶻ Native Biu Demo](https://github.com/mindon/native-biu-demo#readme) - Minimal zero-config Native SDK demo using `.native` markup, Zig state, hot reload, testing, and the Biu/Bun ecosystem.
