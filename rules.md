@@ -47,7 +47,7 @@ A library or package qualifies only when it is reusable and designed specificall
 
 It must provide one or more of the following:
 
-- Native SDK components, widgets, themes, effects, or view helpers;
+- Native SDK components, widgets, effects, or view helpers;
 - Native SDK bindings, bridge integrations, adapters, or platform capabilities;
 - reusable `app.zon`, markup, automation, packaging, or build functionality;
 - an installable API whose documented purpose is extending Native SDK applications.
@@ -75,8 +75,7 @@ Generic Zig libraries and learning resources should be submitted to broader ecos
 - `Apps` — usable public applications whose distributed or documented implementation uses Native SDK.
 - `Examples` — focused demos, starters, experiments, and learning projects that teach a concrete Native SDK capability.
 - `Skills` — installable agent skills designed specifically for Native SDK development.
-- `Theme Packs` — reusable Native SDK themes and theme-specific resources.
-- `Tooling` — developer tools for creating, editing, inspecting, testing, automating, packaging, or distributing Native SDK projects.
+- `Tooling` — developer tools and theme resources for creating, styling, editing, inspecting, testing, automating, packaging, or distributing Native SDK projects. Theme packs are collected on the dedicated themes page rather than listed individually in the root directory.
 
 Choose the most specific section. Do not add a new section until several qualifying entries clearly require it.
 

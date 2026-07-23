@@ -1,6 +1,10 @@
 # Native SDK Themes
 
-This directory sketches a proposed theme-pack layout for Native SDK.
+Browse the complete collection visually in the [Native SDK Theme Gallery](https://nativesdkthemes.vercel.app).
+
+This directory is the canonical index for the repository's Native SDK themes. It includes the individual packs, the [theme-pack specification](SPEC.md), and the [installer source](../scripts/install-theme.sh).
+
+The packs use a proposed theme layout for Native SDK.
 
 Current Native SDK theme selection is manifest/API vocabulary:
 
@@ -20,13 +24,13 @@ Today, `house` and `geist` are built-in theme packs wired through `ThemePack` an
 Copy a theme pack into an app-local `themes/` directory:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- all
+curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-vercel-native/main/scripts/install-theme.sh | sh -s -- all
 ```
 
 Or install one theme:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- graphite
+curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-vercel-native/main/scripts/install-theme.sh | sh -s -- graphite
 ```
 
 Then select a theme from `app.zon` once the SDK registry supports app-local theme modules:

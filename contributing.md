@@ -46,8 +46,7 @@ Do not submit:
 - `Apps` — usable public applications built with Native SDK.
 - `Examples` — focused demos, starters, and learning projects.
 - `Skills` — installable agent skills designed specifically for Native SDK development. Link directly to the skill's canonical `SKILL.md`.
-- `Theme Packs` — themes and theme-related resources.
-- `Tooling` — CLIs, editor support, automation, and developer tools.
+- `Tooling` — CLIs, editor support, automation, developer tools, and theme resources. Add theme packs to the dedicated [themes index](themes/README.md) rather than the root list.
 
 Add a new section only when several qualifying entries clearly need one.
 

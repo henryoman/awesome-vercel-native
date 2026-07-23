@@ -18,7 +18,6 @@
 - [Apps](#apps)
 - [Examples](#examples)
 - [Skills](#skills)
-- [Theme Packs](#theme-packs)
 - [Tooling](#tooling)
 
 ## Official
@@ -48,18 +47,21 @@
 ## Apps
 
 - [Audiobook Maker](https://github.com/lichen0114/audiobook-maker/tree/main/desktop#readme) - Native macOS audiobook generation app for a Kokoro TTS backend using Native SDK markup, Zig state, native file picking, and bundled Python, MLX, FFmpeg, and espeak runtime dependencies.
+- [Artemis](https://github.com/boydvoid/artemis#readme) - Early macOS and Linux database browser for PostgreSQL and SQLite using a Native SDK WebView shell, Zig-native database drivers, and a React data grid.
 - [Chutes E2EE Native SDK Proof](https://github.com/alex-drocks/chutes-e2ee-chat-nativesdk#readme) - Native-rendered proof app for encrypted Chutes.ai chat requests using Zig, Native markup, `fx.fetch`, and Native SDK automation.
 - [Compressor](https://github.com/sonnylazuardi/compressor#readme) - Native Windows image compressor using Native markup, Zig state, native file dialogs, drag and drop, and Bun-powered WebP encoding.
 - [GIFBin](https://github.com/henryoman/gifbin#readme) - Native GIF creation app using a Native SDK GPU surface, canvas widgets, Zig state, drag and drop, native dialogs, image decoding, and GIF export.
 - [Hyper Term](https://github.com/phodal/hyper-term#readme) - macOS-first terminal and coding-agent workspace using Native SDK for native chrome, a Rust-owned PTY bridge, and an anchored system WebView for terminal rendering.
 - [Inbox Zero Mail](https://github.com/inbox-zero/inbox-zero-mail/tree/main/NativeApp#readme) - Cross-platform Gmail and Outlook client rendered with Native SDK and Zig, with OAuth, native multi-window composition, search, message actions, and deterministic tests.
 - [Lavalamp](https://github.com/root-daemon/lavalamp-rewritten#readme) - Local AI coding assistant with a Native SDK desktop client for sessions, streamed conversations, tool results, permissions, questions, and composer workflows.
+- [Lumiveo](https://github.com/fujahgabriel/Lumiveo#readme) - macOS app-demo video editor using a Native SDK Zig and WebView shell, React and Remotion editing, native dialogs, and a bundled local worker.
 - [Maat](https://github.com/lzitser23/maat#readme) - Local-first macOS and Windows visual asset manager using Native SDK, Zig, React, SQLite, native file operations, and a system WebView.
 - [Mac Cleaner](https://github.com/jellydn/mac-cleaner#readme) - Native macOS cleaner dashboard using Native SDK markup and Zig to run Mole status, cleanup, optimization, purge, and history commands.
 - [Mousemove](https://github.com/wjx/mousemove#readme) - Native Windows mouse activity utility using Native SDK canvas rendering, raw input handling, background timers, and a click-through desktop overlay.
 - [OCPP DebugKit Studio](https://github.com/ocpp-debugkit/studio#readme) - Early-stage native OCPP charging-session debugger built with Zig and Native SDK, with macOS/Linux CI and automation-driven smoke testing.
 - [OfficeMachine Music](https://github.com/brianrabil/officemachine/tree/main/apps/music-player#readme) - Local-first macOS music player rendered entirely with Native SDK, with album browsing, search, native menus, cover art, playback controls, and a persistent queue.
 - [OfficeMachine Video](https://github.com/brianrabil/officemachine/tree/main/apps/video-editor#readme) - Local-first video editor using Native SDK, React, Remotion, native project files, local media storage, and an optional AI editing agent.
+- [openbar2000](https://github.com/atresnjo/openbar2000#readme) - Native macOS audio player using Native SDK markup and TypeScript core logic with local-file playback, Spotify integration, keyboard controls, and a bundled Rust helper.
 - [Petdex Desktop](https://github.com/crafter-station/petdex/tree/main/packages/petdex-desktop-native#readme) - Native desktop-pet renderer using Native SDK, atlas-backed animation, model-driven pet states, and automation-based screenshot testing without a WebView or sidecar.
 - [Plaza](https://github.com/zig-nostr/plaza#readme) - Fast, local-first Nostr client built with Zig and Native SDK, with native-rendered feeds, profiles, relays, search, and cross-platform CI.
 - [Press](https://github.com/Lulzx/press#readme) - Native macOS video compressor using Native SDK, Zig, drag and drop, file dialogs, live FFmpeg progress, and quality presets.
@@ -67,7 +69,9 @@
 - [Signet](https://github.com/zig-nostr/signet#readme) - Native macOS Nostr signer using a Native SDK and Zig approval interface for NIP-46 requests handled by an isolated daemon.
 - [SkillManager](https://github.com/TudorAndrei/SkillManager#readme) - macOS and Linux agent-skill manager using Native SDK, Zig bridge commands, and a React WebView to discover, install, update, and remove skills.
 - [Token Tach](https://github.com/phall1/token-tach#readme) - Native macOS menu bar app for AI coding-agent token usage using Native SDK, Zig, Metal rendering, local ledger tailing, and a vendored Native SDK fork for popover and status-item support.
+- [Video Transcribe](https://github.com/stevederico/video-transcribe-mac#readme) - Native macOS transcription app using Native SDK markup and a TypeScript core with local whisper.cpp and optional xAI speech-to-text backends.
 - [Widgoal](https://github.com/eyadhammouda/widgoal#readme) - Native macOS football score widget using Native SDK native views, a Metal GPU surface, ESPN score data, league and team following, and live menu bar updates.
+- [xvibe](https://github.com/ErzenXz/xvibe#readme) - Cross-platform native command center for Codex, Claude, and OpenCode using Native SDK markup, Zig process effects, streaming output, cancellation, and diff verification.
 
 ## Examples
 
@@ -87,31 +91,11 @@
 
 - [Native SDK](https://github.com/vercel-labs/native/blob/main/skills/native-sdk/SKILL.md) - Official installable skill that teaches coding agents to discover and load version-matched Native SDK guidance from the CLI.
 
-## Theme Packs
-
-- [Theme Gallery](https://nativesdkthemes.vercel.app) - Browsable gallery of Native SDK theme packs.
-- [Theme Pack Spec](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/SPEC.md) - Proposed Zig theme-pack format that resolves to the same `DesignTokens` shape as the built-in `house` and `geist` packs.
-- [House](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/house.zig) - Default monochrome neutral register.
-- [Geist](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/geist.zig) - Built-in Geist-inspired register with cool neutrals, blue focus, 6px controls, and a taller control ladder.
-- [Cobalt](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/cobalt.zig) - Example blue-accent theme pack extending `house`.
-- [Graphite](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/graphite.zig) - Example dense neutral theme pack extending `geist`.
-- [Solarized](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/solarized.zig) - Classic low-contrast warm/cyan theme pack.
-- [Dracula](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/dracula.zig) - Purple-accent editor theme with bright semantic colors.
-- [Gruvbox](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/gruvbox.zig) - Retro warm theme with earthy semantic hues.
-- [Nord](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/nord.zig) - Cool arctic theme with blue-gray surfaces.
-- [Monokai](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/monokai.zig) - High-energy classic editor palette with green and cyan accents.
-- [One Dark](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/one_dark.zig) - Atom-style neutral dark theme with blue accents.
-- [Tokyo Night](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/tokyo_night.zig) - Deep blue editor theme with vivid syntax-inspired hues.
-- [Catppuccin](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/catppuccin.zig) - Soft pastel theme with Latte/Mocha-style light and dark palettes.
-- [Rose Pine](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/rose_pine.zig) - Muted rose and pine palette with soft rounded surfaces.
-- [GitHub](https://github.com/henryoman/awesome-vercel-native/blob/main/themes/github.zig) - Familiar GitHub-style light and dark UI palette.
-
 ## Tooling
 
 - [Native SDK CLI](https://native-sdk.dev/cli) - Commands for initializing, developing, checking, testing, building, packaging, and automating apps.
 - [Native Markup Extension](https://github.com/vercel-labs/native/tree/main/editors/native-markup#readme) - Editor support for `.native` markup.
-- [Theme Installer](https://github.com/henryoman/awesome-vercel-native/blob/main/scripts/install-theme.sh) - Small shell installer for copying a theme Zig module into an app-local `themes/` directory.
-- [Theme Gallery](https://github.com/henryoman/awesome-vercel-native/tree/main/tools/theme-gallery#readme) - Minimal Svelte gallery for browsing the theme packs in this repository.
+- [Themes](https://github.com/henryoman/awesome-vercel-native/tree/main/themes#readme) - Browse Native SDK themes, open the visual gallery, install packs, and read the theme-pack specification.
 
 ## Contributing
 

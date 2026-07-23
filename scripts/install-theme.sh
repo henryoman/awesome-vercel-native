@@ -1,14 +1,14 @@
 #!/bin/sh
 set -eu
 
-repo_raw_base="${THEME_BASE_URL:-https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/themes}"
+repo_raw_base="${THEME_BASE_URL:-https://raw.githubusercontent.com/henryoman/awesome-vercel-native/main/themes}"
 theme="${1:-}"
 dest_dir="${2:-themes}"
 themes="house geist cobalt graphite solarized dracula gruvbox nord monokai one_dark tokyo_night catppuccin rose_pine github"
 
 usage() {
     echo "usage: install-theme.sh <theme-name|all> [destination-dir]" >&2
-    echo "example: curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-native-sdk/main/scripts/install-theme.sh | sh -s -- all" >&2
+    echo "example: curl -fsSL https://raw.githubusercontent.com/henryoman/awesome-vercel-native/main/scripts/install-theme.sh | sh -s -- all" >&2
 }
 
 case "$theme" in
